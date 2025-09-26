@@ -1,42 +1,40 @@
-% main.tex
-% Per compilare, esegui i comandi:
+% Compilation:
 % pdflatex main.tex
 % biber main
 % pdflatex main.tex
 % pdflatex main.tex
 
-\documentclass[11pt,a4paper,oneside]{book}
 
-% -------------------------
-% Pacchetti Standard per pdfLaTeX
-% -------------------------
+\documentclass[12pt,a4paper,oneside]{book}
+
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{csquotes}
+\usepackage{pgfplots}
 \usepackage{graphicx}
+\usepackage{enumitem}
 \usepackage{geometry}
 \geometry{a4paper, margin=25mm}
-
-% Pacchetti per la matematica
 \usepackage{amsmath}
+\usepackage{subcaption}
+\usepackage{caption}
+\usepackage{tikz}
+\usepackage{titlesec}
 
-% Link cliccabili
+
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries} 
+  {}                         
+  {20pt}                     
+  {\Huge}                    
+
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 
-% -------------------------
-% Bibliografia
-% -------------------------
 \usepackage[backend=biber,style=numeric,sorting=nyt]{biblatex}
 \addbibresource{bib/references.bib}
 
-% -------------------------
-% Macro Utili
-% -------------------------
 \newcommand{\vect}[1]{\mathbf{#1}}
 
-% -------------------------
-% Metadati
-% -------------------------
 \title{Econophysics --- Lecture Notes}
 \author{Alessandro Casti \and Giacomo Lavezzi}
 \date{\today}
@@ -53,6 +51,7 @@
 
 % Includi i capitoli
 \include{chapters/01-intro}
+\include{chapters/02-brownian_motion}
 % \include{chapters/02-stochastic-processes}
 
 \backmatter
